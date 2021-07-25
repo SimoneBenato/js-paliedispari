@@ -20,7 +20,7 @@
 
 // L’utente sceglie pari o dispari e inserisce un numero da 1 a 5.
 var userNumber;
-var pariDispari 
+var pariDispari; 
 
 do {
 	pariDispari = prompt("Inserisci pari o dispari");
@@ -45,20 +45,27 @@ function somma(num1, num2) {
 	var somma = num1 + num2;
 	return somma;
 }
-console.log(somma(cpuNumb, userNumber));
+var somma = somma(cpuNumb, userNumber);
 
 // Stabiliamo se la somma dei due numeri è pari o dispari (usando una funzione)
-function edoardo(num1) {
-	var alberto; 
+function pd(num1) {
+	var check; 
 	if (num1 % 2 == 0)  {
-		alberto = "pari"
+		check = "pari";
 	} else {
-		alberto = "dispari"
+		check = "dispari";
 	}
-	return alberto;
+	return check;
 }
 
 // Dichiariamo chi ha vinto
+var vincitore = pd(somma);
+
+if (vincitore == pariDispari) {
+	console.log("Hai vinto");
+} else {
+	console.log("Hai perso");
+}
 
 
 
